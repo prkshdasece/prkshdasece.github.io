@@ -3,79 +3,84 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Portfolio</title>
+  <title>Prakash Das | Portfolio</title>
   <style>
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f9f9f9;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f4f7fa;
       color: #333;
     }
     header {
-      background: #222;
+      background: linear-gradient(135deg, #1a237e, #0d47a1);
       color: #fff;
-      padding: 2rem 1rem;
+      padding: 4rem 2rem;
       text-align: center;
     }
     header h1 {
       margin: 0;
-      font-size: 2.5rem;
+      font-size: 3rem;
     }
     header p {
-      margin-top: .5rem;
-      font-size: 1.2rem;
-      color: #bbb;
+      margin-top: .8rem;
+      font-size: 1.3rem;
+      color: #e0e0e0;
     }
     nav {
       display: flex;
       justify-content: center;
-      background: #444;
-      padding: .5rem;
+      background: #0d47a1;
+      padding: .8rem;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
     }
     nav a {
       color: white;
       text-decoration: none;
-      margin: 0 1rem;
+      margin: 0 1.2rem;
       font-weight: bold;
+      transition: color .3s;
     }
     nav a:hover {
-      color: #ff9800;
+      color: #ffca28;
     }
     section {
-      padding: 3rem 1rem;
-      max-width: 900px;
+      padding: 4rem 1.5rem;
+      max-width: 1000px;
       margin: auto;
     }
     section h2 {
       text-align: center;
-      margin-bottom: 1.5rem;
-      font-size: 2rem;
-      color: #222;
+      margin-bottom: 2rem;
+      font-size: 2.2rem;
+      color: #0d47a1;
     }
-    .projects {
+    .projects, .achievements {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 1.5rem;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.8rem;
     }
     .card {
       background: white;
-      border-radius: 8px;
-      padding: 1.5rem;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-      transition: transform .2s;
+      border-radius: 12px;
+      padding: 1.8rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      transition: transform .3s, box-shadow .3s;
     }
     .card:hover {
-      transform: scale(1.05);
+      transform: translateY(-5px);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.15);
     }
     footer {
-      background: #222;
-      color: #bbb;
+      background: #0d47a1;
+      color: #ccc;
       text-align: center;
-      padding: 1.5rem;
+      padding: 2rem;
       margin-top: 2rem;
     }
     footer a {
-      color: #ff9800;
+      color: #ffca28;
       margin: 0 0.5rem;
       text-decoration: none;
     }
@@ -83,50 +88,84 @@
 </head>
 <body>
   <header>
-    <h1>Your Name</h1>
-    <p>Embedded Systems Developer | C Programmer | IoT Enthusiast</p>
+    <h1>Prakash Das</h1>
+    <p>Junior Robotics Engineer | Embedded Systems | VLSI | DSP | Photonics | IoT & AI Enthusiast</p>
   </header>
 
   <nav>
     <a href="#about">About</a>
     <a href="#projects">Projects</a>
+    <a href="#achievements">Achievements</a>
     <a href="#contact">Contact</a>
   </nav>
 
   <section id="about">
     <h2>About Me</h2>
-    <p>Hello! I’m a passionate developer learning embedded systems, C programming, and IoT. I enjoy building projects that combine hardware and software to solve real-world problems. Currently, I’m exploring STM32, Arduino, and ESP8266.</p>
+    <p>Hello! I’m <b>Prakash Das</b>, a passionate engineer with a BTech in ECE from North-Eastern Hill University, Shillong. 
+       Currently working as a <b>Junior Robotics Engineer at Symbica Pvt Ltd</b>, where I develop control systems for bionic prosthetic hands. 
+       I have strong expertise in Embedded Systems, Digital Signal Processing, VLSI, Silicon Photonics, and IoT & AI applications. 
+       My work bridges hardware and software, with hands-on experience in Arduino, Raspberry Pi, STM32, FPGA design, DSP algorithms, and sensor interfacing.</p>
   </section>
 
   <section id="projects">
-    <h2>Projects</h2>
+    <h2>Projects & Works</h2>
     <div class="projects">
       <div class="card">
-        <h3>Blackpill LED Controller</h3>
-        <p>A simple embedded project where I control an LED with a push button using STM32F411 Blackpill board.</p>
+        <h3>Bionic Prosthetic Hand Control</h3>
+        <p>Worked on advanced control algorithms and signal processing using IMUs to improve gesture recognition and hand movement.</p>
       </div>
       <div class="card">
-        <h3>ESP8266 Sensor Node</h3>
-        <p>Created a Wi-Fi-enabled sensor node to read temperature and send data to a web dashboard.</p>
+        <h3>Lung Simulator with PID Control</h3>
+        <p>Designed and maintained PID-based control flow for a lung simulator using bellow displacement feedback.</p>
       </div>
       <div class="card">
-        <h3>PID Motor Controller</h3>
-        <p>Implemented a PID controller in C to stabilize motor speed in an embedded system project.</p>
+        <h3>Fluid Volume Tracking System</h3>
+        <p>Implemented dual SFM3000 flow sensors (I2C with PCA9546A mux) and encoder-based actuator for accurate fluid displacement control.</p>
+      </div>
+      <div class="card">
+        <h3>PPG Dataset Analysis</h3>
+        <p>Performed DSP and feature extraction on 2175 Hz PPG signals in MATLAB for non-invasive blood glucose estimation.</p>
+      </div>
+      <div class="card">
+        <h3>DSP on Arduino Due</h3>
+        <p>Implemented FIR low-pass filters using convolution techniques at 10 kHz sampling frequency for real-time DSP learning.</p>
+      </div>
+      <div class="card">
+        <h3>Silicon Photonics Research</h3>
+        <p>Designed and simulated higher-order filters for photonic integrated circuits; presented at IIT Guwahati’s Research and Industrial Conclave.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="achievements">
+    <h2>Achievements & Training</h2>
+    <div class="achievements">
+      <div class="card">
+        <h3>Symbica Pvt Ltd</h3>
+        <p>Joined as <b>Junior Robotics Engineer</b> in 2025, contributing to bionic prosthetic hand development.</p>
+      </div>
+      <div class="card">
+        <h3>IIT Guwahati Poster Presentation</h3>
+        <p>Selected for poster presentation on “7th order Chebyshev Filter for Photonic Integrated Circuits” at the Research and Industrial Conclave, IIT Guwahati.</p>
+      </div>
+      <div class="card">
+        <h3>Industrial IoT & Edge AI Training</h3>
+        <p>Completed intensive training at IIT Guwahati on IoT, Edge AI, Arduino, NodeMCU, and Raspberry Pi applications.</p>
       </div>
     </div>
   </section>
 
   <section id="contact">
     <h2>Contact</h2>
-    <p>You can reach me at: <b>your.email@example.com</b></p>
+    <p>You can reach me at: <b>prkshhhdas@gmail.com</b> | 📱 +91 6001224293</p>
     <p>
-      <a href="https://github.com/yourusername" target="_blank">GitHub</a> | 
-      <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a>
+      <a href="https://github.com/" target="_blank">GitHub</a> | 
+      <a href="https://linkedin.com/in/" target="_blank">LinkedIn</a>
     </p>
   </section>
 
   <footer>
-    <p>© 2025 Your Name | Built with ❤️ on GitHub Pages</p>
+    <p>© 2025 Prakash Das | Built with ❤️</p>
   </footer>
 </body>
 </html>
